@@ -13,14 +13,17 @@
     "sourceMap": true,
     "target": "es5"
   },
-  "typeRoots": [
-      "node_modules/@types"
-    ],
   "include": [
-    "src/**/*.ts"
-  ],
+    "src/mobile/**/*.ts"
+  ], 
+  "typeRoots": [
+      "../node_modules/@types"
+    ],
   "exclude": [
-    "../node_modules"
+    "../node_modules",
+    "../src/browser",
+    "../src/server",
+    "../src/common"    
   ],
   "compileOnSave": false,
   "atom": {

@@ -67,9 +67,11 @@
     "webpack-dev-server": "^2.4.1"
   },
   "config": {
-    "ionic_src_dir": "./src/mobile/src",
+    "ionic_src_dir": "./src/mobile",
     "ionic_webpack": "./config/webpack.mobile.config.js",
-    "ionic_ts_config": "./tsconfig/mobile.json"
+    "ionic_ts_config": "./tsconfig/mobile.json",
+    "ionic_www_dir": "./build/mobile/www",
+    "ionic_build_dir": "./build/mobile/www/build"
   },
   "cordovaPlugins": [
     "cordova-plugin-whitelist",
