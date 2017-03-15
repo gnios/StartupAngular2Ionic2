@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "rootDir": "./../../../",
+        "outDir": "./../../build/server",
+        "module": "commonjs",
+        "declaration": true,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "inlineSources": true,
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "*",
+                "./@types_local/*"
+            ]
+        },
+        "typeRoots": [
+            "./../../node_modules/@types",
+            "./@types_local"
+        ]
+    },
+    "include": [
+        "app/app.ts",
+        "./../common/*.ts"
+    ],
+    "exclude": [
+        "../../node_modules",
+        "../browser",
+        "../mobile"
+    ]
+}

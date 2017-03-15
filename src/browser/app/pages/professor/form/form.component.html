@@ -1,0 +1,41 @@
+
+<toaster-container [toasterconfig]="toasterconfig"></toaster-container>
+<form novalidate (ngSubmit)="onSubmit(form)" [formGroup]="form" class="form-horizontal ">
+    <div class="card">
+        <div class="card-header">
+            <strong>Professor</strong>
+        </div>
+        <div class="card-block">
+            <div class="form-group row">
+                <label class="col-md-3 form-control-label">Nome</label>
+                <div class="col-md-9">
+                    <input formControlName="nome" class="form-control" value="{{data.nome}}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 form-control-label" for="ies">E-mail</label>
+                <div class="col-md-9">
+                    <input type="text" formControlName="email" class="form-control" id="email" value="{{data.email}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 form-control-label" for="cpf">CPF</label>
+                <div class="col-md-9">
+                    <input type="text" formControlName="cpf" class="form-control" id="cpf" placeholder="0000 0000 0000 0000" value="{{data.cpf}}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-3 form-control-label" for="ies">IES</label>
+                <div class="col-md-9">
+                    <input type="text" formControlName="ies" class="form-control" id="ies" value="{{data.ies}}">
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer">
+
+            <button type="submit" [disabled]="form.invalid" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Salvar</button>
+            <button type="reset" (click)="onCancel()" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Cancelar</button>
+        </div>
+    </div>
+</form>
