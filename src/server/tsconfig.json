@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "rootDir": "./../../../",
-        "outDir": "./../../build/server",
+        "target": "es6",
+        "rootDir": "./../",
+        "outDir": "./../../build",
         "module": "commonjs",
         "declaration": true,
         "noImplicitAny": false,
@@ -10,11 +10,8 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "inlineSources": true,
-        "lib": [
-            "es6",
-            "dom"
-        ],
         "baseUrl": ".",
+        "types" : [ "node" ],
         "paths": {
             "*": [
                 "*",
@@ -22,17 +19,17 @@
             ]
         },
         "typeRoots": [
-            "./../../node_modules/@types",
+            "./node_modules/@types",
             "./@types_local"
         ]
     },
     "include": [
-        "app/app.ts",
-        "./../common/*.ts"
+        "app/**/*.ts",
+        "../../src/common/*"
     ],
     "exclude": [
         "../../node_modules",
-        "../browser",
-        "../mobile"
+        "../../src/browser",
+        "../../src/mobile"
     ]
 }

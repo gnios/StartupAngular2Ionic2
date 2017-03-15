@@ -6,7 +6,7 @@
     "experimentalDecorators": true,
     "lib": [
       "dom",
-      "es2015"
+      "es6"
     ],
     "module": "es2015",
     "moduleResolution": "node",
@@ -17,7 +17,7 @@
     "src/mobile/**/*.ts"
   ], 
   "typeRoots": [
-      "../node_modules/@types"
+      "../typings"
     ],
   "exclude": [
     "../node_modules",

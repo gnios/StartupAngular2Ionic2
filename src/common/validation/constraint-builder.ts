@@ -10,7 +10,7 @@ export class ConstraintBuilder {
 
       const newConstraints = keysToBeStripped
         .reduce((modifiedConstraints, key) => {
-          let constraint = Object.assign({}, constraints[key]);
+          let constraint = (<any>Object).assign({}, constraints[key]);
           delete constraint.required;
           modifiedConstraints[key] = constraint;
           return modifiedConstraints;
