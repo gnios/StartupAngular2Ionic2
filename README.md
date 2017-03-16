@@ -5,7 +5,6 @@ Projeto base, contendo um webapp com angular 2 e um app híbrido usando ionic 2,
 
 Comando | Ação
 ------------ | -------------
-ionic build | Content from cell 2
 ionic serve | Sobe um servidor com o app mobile.
 npm run webapp | Sobe um servidor com o webapp.
 npm run server | Sobe o backend mock.
