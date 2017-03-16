@@ -12,13 +12,13 @@
 
    "serverclean": "rimraf build",
     "prebuild": "npm run clean",
-    "serverbuild": "tsc --p ./src/server/tsconfig.json",
+    "server": "nodemon -r dotenv/config --delay 1500ms --watch dev.env --watch ./build \"./build/server/app/app.js\" dotenv_config_path=./src/server/dev.env",
+    "serverbuild": "tsc --p ./tsconfig/server.json",
     "prestart": "npm run build",
     "serverstart": "node ./build/server/app/app.js",
     "predev": "npm run clean",
     "dev": "concurrently \"npm run tsc-watch\" \"npm run nodemon\"",
     "prenodemon": "wait-on ./build/server/app/app.js",
-    "nodemon": "nodemon -r dotenv/config --delay 1500ms --watch dev.env --watch ./build \"./build/server/app/app.js\" dotenv_config_path=./src/server/dev.env",
     "tsc-watch": "tsc -w",
     "all": "concurrently --kill-others \"npm run webapp\" \"npm run nodemon\" \"ionic serve\""
   },

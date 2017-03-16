@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es6",
         "rootDir": "./../",
-        "outDir": "./../../build",
+        "outDir": "./../build",
         "module": "commonjs",
         "declaration": true,
         "noImplicitAny": false,
@@ -15,21 +15,21 @@
         "paths": {
             "*": [
                 "*",
-                "./@types_local/*"
+                "./../src/server/@types_local/*"
             ]
         },
         "typeRoots": [
-            "./node_modules/@types",
-            "./@types_local"
+            "./../node_modules/@types",
+            "./../src/server/@types_local"
         ]
     },
     "include": [
         "app/**/*.ts",
-        "../../src/common/*"
+        "../src/common/*"
     ],
     "exclude": [
-        "../../node_modules",
-        "../../src/browser",
-        "../../src/mobile"
+        "../node_modules",
+        "../src/browser",
+        "../src/mobile"
     ]
 }
