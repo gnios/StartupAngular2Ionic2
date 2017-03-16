@@ -8,6 +8,6 @@ Comando | Ação
 ionic build | Content from cell 2
 ionic serve | Sobe um servidor com o app mobile.
 npm run webapp | Sobe um servidor com o webapp.
-npm run server | Sobe o servidor nodejs com as rotas.
-npm run serverbuild | Compila o typescript do server nodejs.
+npm run server | Sobe o backend mock.
+npm run serverbuild | Compila o typescript do backend mock.
 npm run all | Sobe todos os apps (webApp, mobileApp e o backend).
